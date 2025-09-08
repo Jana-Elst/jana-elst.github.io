@@ -31,8 +31,8 @@ device:
     - desktop
 role: individual student work
 tags:
-    - Development
-    - Art
+    - Web Development
+    - ML5
 draft: true
 permalink: projects/homage-to-squares/
 ---

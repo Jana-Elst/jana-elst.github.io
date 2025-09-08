@@ -14,6 +14,8 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const hasContent = entry.rendered.html !== '';
 ---
 
 <style>
@@ -163,6 +165,14 @@ const { Content } = await entry.render();
     margin: 4rem 0;
   }
 
+  :global(p + p) {
+    padding-top: var(--space-2xs);
+  }
+
+  :global(em) {
+    font-style: italic;
+  }
+
   @media screen and (min-width: 48rem) {
     .button--top {
       grid-area: button;
@@ -310,15 +320,17 @@ const { Content } = await entry.render();
   <Content />
 
   <div slot="gallery">
-    <ul class="links links--content">
-      {
-        entry.data.links.map((l) => (
-          <li class="link">
-            <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
-          </li>
-        ))
-      }
-    </ul>
+    {
+      hasContent && (
+        <ul class="links links--content">
+          {entry.data.links.map((l) => (
+            <li class="link">
+              <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
+            </li>
+          ))}
+        </ul>
+      )
+    }
 
     <ul class="gallery">
       {

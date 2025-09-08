@@ -39,8 +39,8 @@ tools:
 device: []
 role: individual student work
 tags:
-    - user research
-    - concept development
+    - User Research
+    - Concept Development
 draft: true
 permalink: projects/master-thesis/
 ---

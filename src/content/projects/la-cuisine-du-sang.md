@@ -38,7 +38,8 @@ device:
 role: individual student work
 tags:
     - Web Development
-    - UX, UI & Web Design
+    - Web Design
+    - UX
 draft: true
 permalink: projects/la-cuisine-du-sang/
 ---
