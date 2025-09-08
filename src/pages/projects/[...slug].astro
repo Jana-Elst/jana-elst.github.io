@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Markdown from "../../layouts/Markdown.astro";
 import Button from "../../components/Button.astro";
+import Gallery from "../../components/Gallery.astro";
 import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
@@ -15,7 +16,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const hasContent = entry.rendered.html !== '';
+const hasContent = entry.rendered.html !== "";
 ---
 
 <style>
@@ -345,5 +346,7 @@ const hasContent = entry.rendered.html !== '';
     <div class="btn-back">
       <Button btnText="back to top" btnURL="" btnFunction="top" />
     </div>
+
+    <!-- <Gallery images={entry.data.pics.slice(1)} /> -->
   </div>
 </Markdown>

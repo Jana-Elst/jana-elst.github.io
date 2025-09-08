@@ -1,0 +1,51 @@
+---
+import Image from "astro/components/Image.astro";
+const { images } = Astro.props;
+---
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 100dvw;
+        grid-template-rows: 100dvh;
+
+        position: fixed;
+        top: 0px;
+        z-index: 101;
+        background-color: rgba(0, 0, 0, 0.75);
+        opacity: 100%;
+        backdrop-filter: blur(20px);
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 10rem 1fr 10rem;
+        grid-template-rows: 100%;
+        margin: var(--space-l);
+
+        justify-items: center;
+        align-items: center;
+    }
+
+    .image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .arrow {
+        font-size: 3rem;
+        color: var(--bg-color);
+        background-color: transparent;
+        border: none;
+    }
+
+</style>
+
+<div class="container">
+    <div class="gallery">
+        <button class="arrow"><--</button>
+        <Image src={images[0]} alt="" class="image image--gallery" />
+        <button class="arrow">--></button>
+    </div>
+</div>
