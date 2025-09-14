@@ -2,10 +2,10 @@
 const currentPath = Astro.url.pathname;
 console.log(currentPath);
 
-const filters = ["design", "development", "user research"];
+const filters = ["all", "design", "development", "user research"];
 ---
 
-<script>
+<!-- <script>
   // The key is the filter's 'value' from the checkbox.
   // The value is an array of all the data-category tags it should match.
   const filterAliases = {
@@ -58,6 +58,104 @@ const filters = ["design", "development", "user research"];
     });
   };
 
+  const options = document.querySelectorAll(".filteroption");
+  options.forEach((option) =>
+    option.addEventListener("click", handleOptionChange),
+  );
+</script> -->
+<script>
+  // The key is the filter's 'value' from the checkbox.
+  // The value is an array of all the data-category tags it should match.
+  const filterAliases = {
+    "user research": ["user research", "ux"],
+    development: ["development", "web development", "dev", "coding"],
+    design: ["design", "web design", "UI"],
+  };
+
+  const handleOptionChange = (event) => {
+    // --- 1. MANAGE CHECKBOX STATES ---
+    const allInput = document.querySelector('.filteroption[value="all"]');
+    const otherInputs = [
+      ...document.querySelectorAll('.filteroption:not([value="all"])'),
+    ];
+    const clickedInput = event.target;
+
+    // If 'All' was clicked and is now checked, uncheck all other options.
+    if (clickedInput.value === "all" && clickedInput.checked) {
+      otherInputs.forEach((input) => (input.checked = false));
+    }
+    // If another option was clicked and is now checked, uncheck 'All'.
+    else if (clickedInput.value !== "all" && clickedInput.checked) {
+      allInput.checked = false;
+    }
+
+    // If no specific filters are checked (e.g., the user unselected the last one),
+    // default back to selecting 'All'.
+    const anyOtherChecked = otherInputs.some((input) => input.checked);
+    if (!anyOtherChecked) {
+      allInput.checked = true;
+    }
+
+    // --- 2. APPLY THE FILTER LOGIC ---
+    // Get the final selection of checked boxes AFTER managing the states above.
+    const selection = [
+      ...document.querySelectorAll(".filteroption:checked"),
+    ].map(($input) => $input.value);
+
+    const allProjects = document.querySelectorAll("[data-category]");
+    const noResultsMessage = document.querySelector(".noResults");
+
+    // If 'All' is selected, simply show everything and finish.
+    if (selection.includes("all")) {
+      allProjects.forEach(($li) => $li.classList.remove("hidden"));
+      noResultsMessage.classList.add("hidden");
+      return; // Exit the function early
+    }
+
+    // Otherwise, proceed with applying the specific filters.
+    const expandedSelection = selection.flatMap(
+      (filter) => filterAliases[filter] || filter,
+    );
+
+    let hasVisibleProjects = false;
+    allProjects.forEach(($li) => {
+      // Get project categories, and trim whitespace from each just in case.
+      const projectCategories = $li.dataset.category
+        .split(",")
+        .map((cat) => cat.trim());
+
+      // Check if any of the project's categories are in the selected list.
+      const shouldBeVisible = projectCategories.some((category) =>
+        expandedSelection.includes(category),
+      );
+
+      if (shouldBeVisible) {
+        $li.classList.remove("hidden");
+        hasVisibleProjects = true;
+      } else {
+        $li.classList.add("hidden");
+      }
+    });
+
+    // --- 3. SHOW 'NO RESULTS' MESSAGE IF NEEDED ---
+    if (hasVisibleProjects) {
+      noResultsMessage.classList.add("hidden");
+    } else {
+      noResultsMessage.classList.remove("hidden");
+    }
+  };
+
+  // --- 4. INITIAL SETUP ---
+  // Wait for the page to load to ensure elements are available.
+  document.addEventListener("DOMContentLoaded", () => {
+    const allInput = document.querySelector('.filteroption[value="all"]');
+    // Set the "All" button to be checked by default on page load.
+    if (allInput) {
+      allInput.checked = true;
+    }
+  });
+
+  // Add the event listener to all checkboxes.
   const options = document.querySelectorAll(".filteroption");
   options.forEach((option) =>
     option.addEventListener("click", handleOptionChange),
@@ -234,10 +332,9 @@ const filters = ["design", "development", "user research"];
                 <span>{filter}</span>
                 <input
                   class="filteroption"
-                  type="checkbox"
+                  type="radio"
                   value={filter}
                   name="filter"
-                  checked
                 />
               </label>
             </li>
