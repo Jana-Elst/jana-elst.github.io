@@ -2,14 +2,19 @@
 title: Corona Snippets
 description: "This scrollytelling website tells the story of one of the most impactful times of my life: the COVID-19 pandemic and its lockdowns. It's a personal reflection brought to life through my first explorations with GSAP."
 
-preview: /src/images/projects/homage-to-squares/homage-to-squares-1.jpeg
+preview: /src/images/projects/coronasnippets/coronasnippets-1.png
 pics:
-    - /src/images/projects/homage-to-squares/homage-to-squares-11.png
+    - /src/images/projects/coronasnippets/coronasnippets-2.png
+    - /src/images/projects/coronasnippets/coronasnippets-1.png
+    - /src/images/projects/coronasnippets/coronasnippets-3.png
+    - /src/images/projects/coronasnippets/coronasnippets-4.png
+    - /src/images/projects/coronasnippets/coronasnippets-5.png
+    - /src/images/projects/coronasnippets/coronasnippets-6.png
 links:
     -   name: discover the website (desktop only)
-        link: https://lib.ugent.be/catalog/rug01:003150336
+        link: https://www.janaelst.be/scrollytelling/
     -   name: view on GitHub
-        link: https://lib.ugent.be/catalog/rug01:003150336
+        link: https://github.com/Jana-Elst/scrollytelling.git
 year: 2024
 partners:
     - Devine I Creative Code 3
