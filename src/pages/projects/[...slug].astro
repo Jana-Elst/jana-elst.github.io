@@ -16,6 +16,10 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
+console.log("Full entry data:", entry.data);
+console.log("Figma data:", entry.data.figma);
+console.log("Figma src:", entry.data.figma?.src);
+
 const hasContent = entry.rendered.html !== "";
 ---
 
@@ -65,7 +69,8 @@ const hasContent = entry.rendered.html !== "";
     grid-area: img;
   }
 
-  .image--content {
+  .image--content,
+  .frame {
     width: 70%;
     margin: 6rem auto;
     margin-bottom: 4rem;
@@ -174,6 +179,9 @@ const hasContent = entry.rendered.html !== "";
     font-style: italic;
   }
 
+  .frame {
+  }
+
   @media screen and (min-width: 48rem) {
     .button--top {
       grid-area: button;
@@ -236,7 +244,8 @@ const hasContent = entry.rendered.html !== "";
       padding: 0;
     }
 
-    .image--content {
+    .image--content,
+    .frame {
       justify-self: center;
       margin-top: var(--space-s);
     }
@@ -315,7 +324,24 @@ const hasContent = entry.rendered.html !== "";
       }
     </ul>
 
-    <Image src={entry.data.pics[0]} alt="" class="image image--content" />
+    {
+      entry.data.figma ? (
+        <iframe
+          class="frame"
+          src={entry.data.figma.src}
+          width={entry.data.figma.width}
+          height={entry.data.figma.height}
+          style={`border: ${entry.data.figma.border}`}
+          allowfullscreen
+        />
+      ) : (
+        <Image
+          src={entry.data.pics[0]}
+          alt={entry.data.title}
+          class="image image--content"
+        />
+      )
+    }
   </div>
 
   <Content />
