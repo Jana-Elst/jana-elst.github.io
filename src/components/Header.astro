@@ -5,71 +5,13 @@ console.log(currentPath);
 const filters = ["all", "design", "development", "user research"];
 ---
 
-<!-- <script>
-  // The key is the filter's 'value' from the checkbox.
-  // The value is an array of all the data-category tags it should match.
-  const filterAliases = {
-    "user research": ["user research", "ux"],
-    development: ["development", "web development", "dev", "coding"],
-    design: ["design", "web design", "UI"],
-  };
-
-  const handleOptionChange = () => {
-    // Get the base selection from checked boxes (e.g., ["user research"])
-    const selection = [
-      ...document.querySelectorAll(".filteroption:checked"),
-    ].map(($input) => $input.value);
-
-    console.log(selection);
-
-    // 2. Expand the selection to include all alias tags.
-    const expandedSelection = selection.flatMap(
-      (filter) => filterAliases[filter] || filter,
-    );
-
-    console.log(expandedSelection);
-
-    const allProjects = document.querySelectorAll("[data-category]");
-    const noResultsMessage = document.querySelector(".noResults");
-
-    console.log(noResultsMessage);
-
-    if (expandedSelection.length === 0) {
-      allProjects.forEach(($li) => $li.classList.add("hidden"));
-      noResultsMessage.classList.remove("hidden");
-    } else {
-      noResultsMessage.classList.add("hidden");
-    }
-
-    allProjects.forEach(($li) => {
-      const projectCategories = $li.dataset.category.split(",");
-      console.log(projectCategories);
-
-      // 3. Check if the project has any of the tags from the EXPANDED list.
-      const shouldBeVisible = projectCategories.some((category) =>
-        expandedSelection.includes(category),
-      );
-
-      if (shouldBeVisible) {
-        $li.classList.remove("hidden");
-      } else {
-        $li.classList.add("hidden");
-      }
-    });
-  };
-
-  const options = document.querySelectorAll(".filteroption");
-  options.forEach((option) =>
-    option.addEventListener("click", handleOptionChange),
-  );
-</script> -->
 <script>
   // The key is the filter's 'value' from the checkbox.
   // The value is an array of all the data-category tags it should match.
   const filterAliases = {
     "user research": ["user research", "ux"],
     development: ["development", "web development", "dev", "coding"],
-    design: ["design", "web design", "UI", 'app design', 'branding'],
+    design: ["design", "web design", "UI", "app design", "branding"],
   };
 
   const handleOptionChange = (event) => {
