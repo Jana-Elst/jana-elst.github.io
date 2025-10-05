@@ -16,7 +16,7 @@ pics:
 links:
     -   name: discover the website (desktop only)
         link: https://www.janaelst.be/trainArt/
-year: 2024
+year: 2023
 partners:
     - Devine I Creative Code 2
 services:

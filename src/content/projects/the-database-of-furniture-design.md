@@ -13,7 +13,7 @@ links:
     -   name: view the final result
         link: https://www.janaelst.be/atlas/
 
-year: 2023
+year: 2024
 partners:
     - Devine I web 3
 services:

@@ -1,6 +1,6 @@
 ---
 title: Red Cross - Draft
-description: xxxx
+description: xxx
 preview: /src/images/projects/red-cross/red-cross-1.png
 pics:
     - /src/images/projects/red-cross/red-cross-1.png

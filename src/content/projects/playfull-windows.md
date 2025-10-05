@@ -3,7 +3,14 @@ title: playfull windows
 description: During the summer holidays, in between my work as a student worker. I experimented with pop-up windows. This are some of my experiments. I call them 'playfull windows'.
 preview: /src/images/projects/playfull_windows/playfull_windows-1.png
 pics:
-    - src/images/projects/playfull_windows/playfull_windows-1.png
+    - /src/images/projects/playfull_windows/playfull_windows-8.png
+    - /src/images/projects/playfull_windows/playfull_windows-3.png
+    - /src/images/projects/playfull_windows/playfull_windows-2.png
+    - /src/images/projects/playfull_windows/playfull_windows-4.png
+    - /src/images/projects/playfull_windows/playfull_windows-5.png
+    - /src/images/projects/playfull_windows/playfull_windows-6.png
+    - /src/images/projects/playfull_windows/playfull_windows-7.png
+    - /src/images/projects/playfull_windows/playfull_windows-9.png
 links:
     -   name: This project will be on Github soon
         link: ''

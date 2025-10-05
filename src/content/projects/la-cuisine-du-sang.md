@@ -19,7 +19,7 @@ links:
     -   name: view the final result
         link: https://janaelst.be/cuisinedesang/
         
-year: 2023
+year: 2024
 partners:
     - Devine I integration 2
 services:
