@@ -342,10 +342,10 @@ const filters = ["all", "design", "development", "user research"];
     <h1 class="nav__title"><a href="/">Jana</a></h1>
 
     <div class="filters">
+      <li>{currentPath}</li>
       {
         currentPath === "/projects" ? (
           <ul class="filter__list">
-            <li>{currentPath}</li>
             {filters.map((filter) => (
               <li class="filter__item">
                 <label>
