@@ -362,12 +362,12 @@ const filters = ["all", "design", "development", "user research"];
         ) : currentPath === "/" || currentPath === "/discover" ? (
           <ul class="modus__list">
             <li
-              class={`modus__item ${currentPath.replace(/\/$/, "") === "" ? "modus__item--active" : ""}`}
+              class={`modus__item ${currentPath === "/" ? "modus__item--active" : ""}`}
             >
               <a href="/">normal</a>
             </li>
             <li
-              class={`modus__item ${currentPath.replace(/\/$/, "") === "/discover" ? "modus__item--active" : ""}`}
+              class={`modus__item ${currentPath === "/discover" ? "modus__item--active" : ""}`}
             >
               <a href="/discover">discover</a>
             </li>
