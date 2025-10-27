@@ -30,6 +30,7 @@ role: individual student work
 tags:
     - Web Development
     - GSAP
+featured: false
 draft: false
 permalink: projects/corona-snippets/
 ---

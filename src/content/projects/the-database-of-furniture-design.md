@@ -30,6 +30,7 @@ role: individual student work
 tags:
     - Web Development
     - Database visualisation
+featured: false
 draft: true
 permalink: projects/the-database-of-furniture-design/
 ---

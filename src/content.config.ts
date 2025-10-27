@@ -42,6 +42,7 @@ const projects = defineCollection({
             device: z.array(z.string()).optional(),
             role: z.string(),
             tags: z.array(z.string()),
+            featured: z.boolean(),
             draft: z.boolean(),
             permalink: z.string()
         })

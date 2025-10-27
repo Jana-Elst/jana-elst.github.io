@@ -46,15 +46,21 @@ const filters = ["all", "design", "development", "user research"];
 
     const allProjects = document.querySelectorAll("[data-category]");
     const noResultsMessage = document.querySelector(".noResults");
+    const yearHeadings = document.querySelectorAll(".show-dates");
+    const noYearHeadings = document.querySelectorAll(".dont-show-dates");
 
     // If 'All' is selected, simply show everything and finish.
     if (selection.includes("all")) {
       allProjects.forEach(($li) => $li.classList.remove("hidden"));
       noResultsMessage.classList.add("hidden");
+      yearHeadings.forEach(($h) => $h.classList.remove("hidden"));
+      noYearHeadings.forEach(($h) => $h.classList.add("hidden"));
       return; // Exit the function early
     }
 
     // Otherwise, proceed with applying the specific filters.
+    yearHeadings.forEach(($h) => $h.classList.add("hidden"));
+    noYearHeadings.forEach(($h) => $h.classList.remove("hidden"));
     const expandedSelection = selection.flatMap(
       (filter) => filterAliases[filter] || filter,
     );

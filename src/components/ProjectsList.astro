@@ -1,6 +1,6 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
-const { projects } = Astro.props;
+const { projects, showYears } = Astro.props;
 const dates = projects.map((project) => project.data.year);
 const uniqueDates = [...new Set(dates)];
 ---
@@ -72,12 +72,13 @@ const uniqueDates = [...new Set(dates)];
     }
 </style>
 
-{uniqueDates.map((uniqueDate) => 
-    <div class="container-year">
+{
+    showYears ? uniqueDates.map((uniqueDate) => 
+    <div class="container-year show-dates">
             <div class="divider"></div>
             <h3 class="year">{uniqueDate}</h3>
     </div>
-    <ul>
+    <ul class="show-dates">
         {
             projects.map((project) => (project.data.year === uniqueDate ? (
                 <li
@@ -90,7 +91,18 @@ const uniqueDates = [...new Set(dates)];
             ) : ''
         ))}
     </ul>
-)}
+) : ''}
+
+ <ul class=`dont-show-dates ${showYears ? 'hidden' : ''}`>
+        {
+            projects.map((project) => (
+                <li
+                    data-category={project.data.tags.map(
+                        (tag) => `${tag.toLowerCase()}`,
+                    )}
+                ><ProjectCard project={project} /></li>
+                ))}
+</ul>
 
 <div class="noResults hidden">
     <p class="bold">Oooh no, you deselected all the categories.</p>

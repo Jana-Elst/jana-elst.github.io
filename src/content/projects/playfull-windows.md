@@ -28,7 +28,8 @@ role: Personal project
 tags:
     - Web Development
     - Creative Development
-draft: true
+featured: false
+draft: false
 permalink: projects/playfull-windows/
 ---
 ## the first experiment

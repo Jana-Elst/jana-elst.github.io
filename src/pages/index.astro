@@ -6,8 +6,10 @@ import Hero from "../components/Hero.astro";
 import ProjectsList from "../components/ProjectsList.astro";
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
-allProjects.sort((a, b) => +b.data.year - +a.data.year);
-const recentProjects = allProjects.slice(0, 3);
+const featuredProjects = allProjects.filter((project) =>
+    project.data.featured,
+);
+
 ---
 
 <style>
@@ -80,7 +82,7 @@ const recentProjects = allProjects.slice(0, 3);
             />
         </div>
         <div class="projects__content">
-            <ProjectsList projects={recentProjects} />
+            <ProjectsList projects={featuredProjects} showYears={false} />
         </div>
     </div>
 </Base>

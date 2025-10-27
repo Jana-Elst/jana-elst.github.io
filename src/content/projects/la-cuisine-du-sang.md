@@ -17,7 +17,7 @@ pics:
 
 links:
     -   name: view the final result
-        link: https://janaelst.be/cuisinedesang/
+        link: https://projects.janaelst.be/cuisinedesang/
         
 year: 2024
 partners:
@@ -37,10 +37,10 @@ device:
     - desktop
 role: individual student work
 tags:
-    - Web Development
     - Web Design
     - UX
-draft: true
+featured: true
+draft: false
 permalink: projects/la-cuisine-du-sang/
 ---
 ## Concept

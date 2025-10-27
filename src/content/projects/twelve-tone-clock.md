@@ -23,7 +23,8 @@ role: individual student work
 tags:
     - Web Development
     - Concept Development
-draft: true
+featured: false
+draft: false
 permalink: projects/twelve-tone-clock/
 ---
 This "clock" transforms time into sound. It is based on the principles of dodecaphony (twelve-tone music). Each hour and minute corresponds to a note in a twelve-tone series. The sounds are visualized as dynamic colors, Inspired by Scriabin’s synesthetic "clavier à lumières". The clock evolves continuously, with transformations applied to the tone series. every moment will sound different. At quarter-hour intervals, layered sounds build tension to mark significant time shifts.

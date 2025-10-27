@@ -31,6 +31,7 @@ role: individual student work
 tags:
     - Development
     - Javascript
-draft: false
+featured: false
+draft: true
 permalink: projects/train-art/
 ---
