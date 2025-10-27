@@ -2,16 +2,16 @@
 title: Train Art
 description: "This web application provides a minimalist, real-time visualization of all train routes passing through any selected Belgian station."
 
-preview: /src/images/projects/trainArt/trainArt-1.png
+preview: /public/images/projects/trainArt/trainArt-1.png
 pics:
-    - /src/images/projects/trainArt/trainArt-2.png
-    - /src/images/projects/trainArt/trainArt-3.png
-    - /src/images/projects/trainArt/trainArt-4.png
-    - /src/images/projects/trainArt/trainArt-5.png
-    - /src/images/projects/trainArt/trainArt-6.png
-    - /src/images/projects/trainArt/trainArt-7.png
-    - /src/images/projects/trainArt/trainArt-8.png
-    - /src/images/projects/trainArt/trainArt-9.png
+    - /public/images/projects/trainArt/trainArt-2.png
+    - /public/images/projects/trainArt/trainArt-3.png
+    - /public/images/projects/trainArt/trainArt-4.png
+    - /public/images/projects/trainArt/trainArt-5.png
+    - /public/images/projects/trainArt/trainArt-6.png
+    - /public/images/projects/trainArt/trainArt-7.png
+    - /public/images/projects/trainArt/trainArt-8.png
+    - /public/images/projects/trainArt/trainArt-9.png
 
 links:
     -   name: discover the website (desktop only)

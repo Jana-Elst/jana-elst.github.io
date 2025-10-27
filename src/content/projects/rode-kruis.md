@@ -2,27 +2,26 @@
 title: Red Cross
 description: A marketing campaign for Red Cross Flanders built on a single, unsettling question. 'What if we run out of donors?' Instead of just asking them to donate, I confronted them with the alternative, a future where we might be forced to buy what is now freely given.
 
-preview: /src/images/projects/red-cross/red-cross-1.png
+preview: /public/images/projects/red-cross/red-cross-1.png
 pics:
-    - /src/images/projects/red-cross/red-cross-1.png
-    - /src/images/projects/red-cross/red-cross-2.png
-    - /src/images/projects/red-cross/red-cross-3.png
-    - /src/images/projects/red-cross/red-cross-4.png
-    - /src/images/projects/red-cross/red-cross-6.png
-    - /src/images/projects/red-cross/red-cross-7.png
-    - /src/images/projects/red-cross/red-cross-8.png
-    - /src/images/projects/red-cross/red-cross-9.png
-    - /src/images/projects/red-cross/red-cross-10.png
-    - /src/images/projects/red-cross/red-cross-11.png
-    - /src/images/projects/red-cross/red-cross-12.png
-    - /src/images/projects/red-cross/red-cross-13.png
-    - /src/images/projects/red-cross/red-cross-14.png
-    - /src/images/projects/red-cross/red-cross-15.png
-    - /src/images/projects/red-cross/red-cross-16.png
-    - /src/images/projects/red-cross/red-cross-17.png
-    - /src/images/projects/red-cross/red-cross-18.png
-    - /src/images/projects/red-cross/red-cross-19.png
-
+    - /public/images/projects/red-cross/red-cross-1.png
+    - /public/images/projects/red-cross/red-cross-2.png
+    - /public/images/projects/red-cross/red-cross-3.png
+    - /public/images/projects/red-cross/red-cross-4.png
+    - /public/images/projects/red-cross/red-cross-6.png
+    - /public/images/projects/red-cross/red-cross-7.png
+    - /public/images/projects/red-cross/red-cross-8.png
+    - /public/images/projects/red-cross/red-cross-9.png
+    - /public/images/projects/red-cross/red-cross-10.png
+    - /public/images/projects/red-cross/red-cross-11.png
+    - /public/images/projects/red-cross/red-cross-12.png
+    - /public/images/projects/red-cross/red-cross-13.png
+    - /public/images/projects/red-cross/red-cross-14.png
+    - /public/images/projects/red-cross/red-cross-15.png
+    - /public/images/projects/red-cross/red-cross-16.png
+    - /public/images/projects/red-cross/red-cross-17.png
+    - /public/images/projects/red-cross/red-cross-18.png
+    - /public/images/projects/red-cross/red-cross-19.png
 links:
     -   name: Figma prototype
         link: https://www.figma.com/proto/vG7UaH3hwDZ1DX2BWfDTbn/Campagne-Rode-Kruis?page-id=394%3A4699&node-id=427-2702&p=f&viewport=564%2C473%2C0.06&t=U0zfNvC8dqS6t2z3-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=427%3A2702&show-proto-sidebar=1

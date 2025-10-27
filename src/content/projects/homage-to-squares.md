@@ -1,19 +1,19 @@
 ---
 title: Homage to squares
 description: An interactive application inspired by Josef Albers' Homage to the Square, where users create new compositions through hand and face gestures. Through this experience users explore how colors interact and influence each other.
-preview: /src/images/projects/homage-to-squares/homage-to-squares-1.jpeg
+preview: /public/images/projects/homage-to-squares/homage-to-squares-1.jpeg
 pics:
-    - /src/images/projects/homage-to-squares/homage-to-squares-2.jpeg
-    - /src/images/projects/homage-to-squares/homage-to-squares-1.jpeg
-    - /src/images/projects/homage-to-squares/homage-to-squares-3.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-4.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-5.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-6.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-7.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-8.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-9.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-10.png
-    - /src/images/projects/homage-to-squares/homage-to-squares-11.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-2.jpeg
+    - /public/images/projects/homage-to-squares/homage-to-squares-1.jpeg
+    - /public/images/projects/homage-to-squares/homage-to-squares-3.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-4.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-5.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-6.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-7.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-8.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-9.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-10.png
+    - /public/images/projects/homage-to-squares/homage-to-squares-11.png
 links:
     -   name: view the final result
         link: https://janaelst.be/homagetosquares/

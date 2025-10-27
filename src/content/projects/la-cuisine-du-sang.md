@@ -1,19 +1,19 @@
 ---
 title: La cuisine du sang
 description: An experimental dining concept where vegetarians with iron deficiency enjoy carefully prepared blood-based dishes, ethically sourced from dedicated meat-eaters.
-preview: /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-1.png
+preview: /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-1.png
 pics:
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-2.png
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-1.png
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-3.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-4.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-5.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-6.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-7.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-8.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-9.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-10.jpeg
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-11.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-2.png
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-1.png
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-3.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-4.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-5.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-6.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-7.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-8.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-9.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-10.jpeg
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-11.jpeg
 
 links:
     -   name: view the final result
