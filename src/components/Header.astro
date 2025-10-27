@@ -342,9 +342,8 @@ const filters = ["all", "design", "development", "user research"];
     <h1 class="nav__title"><a href="/">Jana</a></h1>
 
     <div class="filters">
-      <li>{currentPath}</li>
       {
-        currentPath === "/projects" ? (
+        currentPath === "/projects/" ? (
           <ul class="filter__list">
             {filters.map((filter) => (
               <li class="filter__item">
@@ -360,7 +359,7 @@ const filters = ["all", "design", "development", "user research"];
               </li>
             ))}
           </ul>
-        ) : currentPath === "/" || currentPath === "/discover" ? (
+        ) : currentPath === "/" || currentPath === "/discover/" ? (
           <ul class="modus__list">
             <li
               class={`modus__item ${currentPath === "/" ? "modus__item--active" : ""}`}
@@ -368,9 +367,9 @@ const filters = ["all", "design", "development", "user research"];
               <a href="/">normal</a>
             </li>
             <li
-              class={`modus__item ${currentPath === "/discover" ? "modus__item--active" : ""}`}
+              class={`modus__item ${currentPath === "/discover/" ? "modus__item--active" : ""}`}
             >
-              <a href="/discover">discover</a>
+              <a href="/discover/">discover</a>
             </li>
           </ul>
         ) : (
