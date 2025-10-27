@@ -6,8 +6,9 @@ import Button from "../components/Button.astro";
 import ProjectsList from "../components/ProjectsList.astro";
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
-allProjects.sort((a, b) => +b.data.year - +a.data.year);
-const recentProjects = allProjects.slice(0, 3);
+const projects = allProjects.filter((project) => !project.data.draft);
+projects.sort((a, b) => +b.data.year - +a.data.year);
+const recentProjects = projects.slice(0, 3);
 ---
 
 <style>
