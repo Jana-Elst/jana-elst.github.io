@@ -28,7 +28,7 @@ const projects = defineCollection({
                     name: z.string(),
                     link: z.string()
                 })
-            ),
+            ).optional(),
             figma: z.object({
                 src: z.string(),
                 width: z.number(),

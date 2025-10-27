@@ -314,13 +314,15 @@ const hasContent = entry.rendered.html !== "";
       {entry.data.description}
     </p>
 
-    <ul class="links">
+    <ul class="links links--content">
       {
-        entry.data.links.map((l) => (
-          <li class="link">
-            <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
-          </li>
-        ))
+        entry.data.links
+          ? entry.data.links.map((l) => (
+              <li class="link">
+                <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
+              </li>
+            ))
+          : ""
       }
     </ul>
 
@@ -350,11 +352,13 @@ const hasContent = entry.rendered.html !== "";
     {
       hasContent && (
         <ul class="links links--content">
-          {entry.data.links.map((l) => (
-            <li class="link">
-              <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
-            </li>
-          ))}
+          {entry.data.links
+            ? entry.data.links.map((l) => (
+                <li class="link">
+                  <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
+                </li>
+              ))
+            : ""}
         </ul>
       )
     }
