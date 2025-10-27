@@ -14,9 +14,6 @@ pics:
     - /public/images/projects/homage-to-squares/homage-to-squares-9.png
     - /public/images/projects/homage-to-squares/homage-to-squares-10.png
     - /public/images/projects/homage-to-squares/homage-to-squares-11.png
-links:
-    -   name: view the final result
-        link: https://janaelst.be/homagetosquares/
         
 year: 2024
 partners:

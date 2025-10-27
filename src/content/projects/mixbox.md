@@ -40,7 +40,7 @@ pics:
 
 links:
     -   name: view project on Behance
-        link: https://lib.ugent.be/catalog/rug01:003150336
+        link: https://www.behance.net/gallery/221574049/Mixbox-Cocktail-Kit-Brand-identity
     -   name: Figma prototype
         link: https://www.figma.com/proto/TxRvm8AWkY25fWlDLGkWZZ/VD4-2425-MixBox---Jana-Elst?page-id=3516%3A12883&node-id=3583-24198&p=f&viewport=164%2C398%2C0.07&t=foJI7y4pUJAzWxc0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3583%3A24198&show-proto-sidebar=1
 figma:
