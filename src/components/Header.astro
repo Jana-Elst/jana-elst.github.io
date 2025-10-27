@@ -345,6 +345,7 @@ const filters = ["all", "design", "development", "user research"];
       {
         currentPath === "/projects" ? (
           <ul class="filter__list">
+            <li>{currentPath}</li>
             {filters.map((filter) => (
               <li class="filter__item">
                 <label>
