@@ -64,7 +64,6 @@ body, button {
   line-height: var(--line-height);
   font-weight: 400;
   background-color: var(--bg-color);
-  cursor: url('/src/assets/ai.svg'), auto;
 }
 
 h2 {
