@@ -32,7 +32,7 @@ tags:
     - Database visualisation
 featured: false
 draft: true
-permalink: projects/the-database-of-furniture-design/
+permalink: /the-database-of-furniture-design/
 ---
 This website showcasing a curated selection from the Vitra Design Museum collection, inspired by their online database and The Atlas of Furniture Design. The site offers multiple ways to explore the collection through categories, themes, and filters, making iconic design pieces easily accessible.
 

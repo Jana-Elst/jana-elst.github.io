@@ -28,7 +28,7 @@ tags:
     - Creative Development
 featured: false
 draft: true
-permalink: projects/poem-txt/
+permalink: /poem-txt/
 ---
 What if you could create a playful, visual poem by literally shooting words from your phone onto your computer screen? This project brings that idea to life. You simply type a word, style it, and 'shoot' it from your device. The harder you flick your phone, the bigger the word appears on the canvas. Once your masterpiece is ready, you can save the final poem directly to your phone's photo gallery.
 

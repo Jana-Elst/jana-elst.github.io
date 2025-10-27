@@ -43,7 +43,7 @@ tags:
     - Concept Development
 featured: false
 draft: false
-permalink: projects/master-thesis/
+permalink: /master-thesis/
 ---
 This project focused on designing an inclusive, sensory-based workshop for visitors with non-congenital brain injuries and elderly residents in care centres at the Royal Museums of Fine Arts of Belgium (KMSKB). The goal was to create a "phygital" (physical + digital) tool that enhances the museum experience by engaging multiple senses, offering an accessible and enriching interaction with art.
 

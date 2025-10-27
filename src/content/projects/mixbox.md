@@ -67,6 +67,6 @@ tags:
     - Branding
 featured: true
 draft: false
-permalink: projects/mixbox/
+permalink: /mixbox/
 ---
 This assignment consisted of two challenges. I needed to create a branding and visual language for Mixbox and provide a design based on the basic wireframes that were provided. 

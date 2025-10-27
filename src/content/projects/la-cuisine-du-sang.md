@@ -41,7 +41,7 @@ tags:
     - UX
 featured: true
 draft: false
-permalink: projects/la-cuisine-du-sang/
+permalink: /la-cuisine-du-sang/
 ---
 ## Concept
 A dining experience designed for vegetarians with iron deficiency, La Cuisine du Sang redefines sustainable eating by serving carefully prepared blood-based dishes. Ethically sourced from dedicated meat-eaters, the donated blood undergoes rigorous testing to ensure safety for both donors and diners.
