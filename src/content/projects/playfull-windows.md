@@ -30,7 +30,7 @@ tags:
     - Creative Development
 featured: false
 draft: false
-permalink: projects/playfull-windows/
+permalink: /playfull-windows/
 ---
 ## the first experiment
 My first experiment was all about populating my screen with multiple, moving pop-up windows. I managed to get it working, but closing all the individual windows afterwards was a pain. Nevertheless, the end result was quite satisfying! I love how a simple concept can evolve into something beautiful and unexpected.

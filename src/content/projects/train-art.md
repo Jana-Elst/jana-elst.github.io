@@ -33,5 +33,5 @@ tags:
     - Javascript
 featured: false
 draft: true
-permalink: projects/train-art/
+permalink: /train-art/
 ---

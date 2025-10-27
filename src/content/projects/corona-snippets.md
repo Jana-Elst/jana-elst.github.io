@@ -32,7 +32,7 @@ tags:
     - GSAP
 featured: false
 draft: false
-permalink: projects/corona-snippets/
+permalink: /corona-snippets/
 ---
 For my Creative Coding course, we had to turn a personal story into an interactive website using GSAP.
 

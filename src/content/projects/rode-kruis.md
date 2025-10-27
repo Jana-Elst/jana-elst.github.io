@@ -48,7 +48,7 @@ tags:
     - Marketing
 featured: true
 draft: false
-permalink: projects/rode-kruis/
+permalink: /rode-kruis/
 ---
 The campaign is designed to guide students through a seamless journey, bringing the 'what if' scenario to life through the following stages:
 
