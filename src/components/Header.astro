@@ -116,13 +116,17 @@ const filters = ["all", "design", "development", "user research"];
   }
 
   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content;
+
     margin: 1rem;
   }
 
   .nav__title {
+    grid-column: 1;
+    grid-row: 1;
+
     font-size: var(--fs-3);
     font-style: normal;
     font-weight: 600;
@@ -135,8 +139,13 @@ const filters = ["all", "design", "development", "user research"];
   }
 
   .nav__list {
+    grid-column: 2;
+    grid-row: 1;
+
     display: flex;
     font-weight: 300;
+
+    justify-self: end;
   }
 
   .nav__item a {
@@ -182,10 +191,18 @@ const filters = ["all", "design", "development", "user research"];
     width: 100%;
   }
 
+  .filters {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-top: 1rem;
+  }
+
   .modus__list,
   .filter__list {
     display: flex;
-    gap: calc(var(--space-2xs) / 2);
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(var(--space-xs));
     font-weight: 300;
   }
 
@@ -193,13 +210,24 @@ const filters = ["all", "design", "development", "user research"];
   .filter__item {
     border: 0.75px solid black;
     border-radius: 100px;
-    padding: 0 var(--space-2xs);
 
     text-transform: lowercase;
+    text-align: center;
+    min-width: 6rem;
 
     transition:
       background-color 0.5s,
       color 0.25s;
+  }
+
+  .filter__item > label,
+  .modus__item > a {
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4xs) var(--space-xs);
   }
 
   .modus__item a {
@@ -207,18 +235,24 @@ const filters = ["all", "design", "development", "user research"];
     color: black;
   }
 
-  .modus__item--active,
+  .modus__item--active {
+    background-color: black;
+  }
+
+  .modus__item--active a,
   .filter__item:has(input:checked) {
     background-color: black;
     color: var(--bg-color);
     font-weight: 400;
   }
 
-  .modus__item:hover a {
+  .modus__item:hover a,
+  .filter__item:hover label {
     color: var(--bg-color);
   }
 
-  .modus__item:hover {
+  .modus__item:hover,
+  .filter__item:hover {
     background-color: black;
   }
 
@@ -247,6 +281,42 @@ const filters = ["all", "design", "development", "user research"];
   @media screen and (min-width: 48rem) {
     .nav {
       margin-bottom: var(--space-2xs);
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    .filters {
+      display: flex;
+      margin-top: 0;
+    }
+
+    .modus__list,
+    .filter__list {
+      gap: calc(var(--space-2xs) / 2);
+    }
+
+    .modus__item,
+    .filter__item {
+      min-width: 0rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__title {
+      grid-column: 1;
+      grid-row: 1;
+
+      font-size: var(--fs-3);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      align-self: center;
+    }
+
+    .nav__list {
+      align-self: center;
     }
 
     header {
@@ -271,32 +341,42 @@ const filters = ["all", "design", "development", "user research"];
   <nav class="nav">
     <h1 class="nav__title"><a href="/">Jana</a></h1>
 
-    {
-      currentPath === "/projects" ? (
-        <ul class="filter__list">
-          {filters.map((filter) => (
-            <li class="filter__item">
-              <label>
-                <span>{filter}</span>
-                <input
-                  class="filteroption"
-                  type="radio"
-                  value={filter}
-                  name="filter"
-                />
-              </label>
+    <div class="filters">
+      {
+        currentPath === "/projects" ? (
+          <ul class="filter__list">
+            {filters.map((filter) => (
+              <li class="filter__item">
+                <label>
+                  {filter}
+                  <input
+                    class="filteroption"
+                    type="radio"
+                    value={filter}
+                    name="filter"
+                  />
+                </label>
+              </li>
+            ))}
+          </ul>
+        ) : currentPath === "/" || currentPath === "/discover" ? (
+          <ul class="modus__list">
+            <li
+              class={`modus__item ${currentPath.replace(/\/$/, "") === "" ? "modus__item--active" : ""}`}
+            >
+              <a href="/">normal</a>
             </li>
-          ))}
-        </ul>
-      ) : (
-        <ul class="modus__list">
-          <li class="modus__item modus__item--active">normal</li>
-          <li class="modus__item">
-            <a href="/discover">discover</a>
-          </li>
-        </ul>
-      )
-    }
+            <li
+              class={`modus__item ${currentPath.replace(/\/$/, "") === "/discover" ? "modus__item--active" : ""}`}
+            >
+              <a href="/discover">discover</a>
+            </li>
+          </ul>
+        ) : (
+          ""
+        )
+      }
+    </div>
 
     <ul class="nav__list" id="nav__list">
       <li class="nav__item"><a href="/projects">projects</a></li>
