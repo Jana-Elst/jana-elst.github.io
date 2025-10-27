@@ -1,12 +1,12 @@
 ---
 title: Twelve tone clock
 description: An interactive audiovisual experience that translates time into sound and color inspired by the principles of dodecaphony and Scriabin’s synesthetic "clavier à lumières.
-preview: /src/images/projects/twelve-tone-clock/twelve-tone-clock-1.jpeg
+preview: /public/images/projects/twelve-tone-clock/twelve-tone-clock-1.jpeg
 pics:
-    - /src/images/projects/twelve-tone-clock/twelve-tone-clock-2.jpeg
-    - /src/images/projects/twelve-tone-clock/twelve-tone-clock-1.jpeg
-    - /src/images/projects/twelve-tone-clock/twelve-tone-clock-3.jpeg
-    - /src/images/projects/twelve-tone-clock/twelve-tone-clock-4.jpeg
+    - /public/images/projects/twelve-tone-clock/twelve-tone-clock-2.jpeg
+    - /public/images/projects/twelve-tone-clock/twelve-tone-clock-1.jpeg
+    - /public/images/projects/twelve-tone-clock/twelve-tone-clock-3.jpeg
+    - /public/images/projects/twelve-tone-clock/twelve-tone-clock-4.jpeg
 links:
     -   name: view the final result
         link: https://janaelst.be/clock/

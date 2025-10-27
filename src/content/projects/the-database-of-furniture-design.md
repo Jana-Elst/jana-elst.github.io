@@ -1,14 +1,14 @@
 ---
 title: The database of furniture design
 description: A digital archive inspired by The Atlas of Furniture Design, offering an interactive exploration of the Vitra Design Museum collection. Through structured categories and dynamic filters, users navigate iconic design pieces and discover their histories.
-preview: /src/images/projects/the-database-furniture-design/the-collector-1.jpeg
+preview: /public/images/projects/the-database-furniture-design/the-collector-1.jpeg
 pics:
-    - /src/images/projects/the-database-furniture-design/the-collector-2.jpeg
-    - /src/images/projects/the-database-furniture-design/the-collector-1.jpeg
-    - /src/images/projects/the-database-furniture-design/the-collector-3.jpeg
-    - /src/images/projects/the-database-furniture-design/the-collector-4.jpeg
-    - /src/images/projects/the-database-furniture-design/the-collector-5.jpeg
-    - /src/images/projects/the-database-furniture-design/the-collector-6.jpeg
+    - /public/images/projects/the-database-furniture-design/the-collector-2.jpeg
+    - /public/images/projects/the-database-furniture-design/the-collector-1.jpeg
+    - /public/images/projects/the-database-furniture-design/the-collector-3.jpeg
+    - /public/images/projects/the-database-furniture-design/the-collector-4.jpeg
+    - /public/images/projects/the-database-furniture-design/the-collector-5.jpeg
+    - /public/images/projects/the-database-furniture-design/the-collector-6.jpeg
 links:
     -   name: view the final result
         link: https://www.janaelst.be/atlas/

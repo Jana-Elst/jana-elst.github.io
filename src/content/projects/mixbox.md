@@ -1,42 +1,42 @@
 ---
 title: Mixbox
 description: MixBox brings bar-quality flavors straight to your home. With monthly cocktail kits, mixology becomes easy and fun for everyone. Each box includes premium ingredients, clear step-by-step guidance and unique recipes, so anyone can make the perfect cocktail.
-preview: /src/images/projects/mixbox/mixbox-1.png
+preview: /public/images/projects/mixbox/mixbox-1.png
 pics:
-    - /src/images/projects/mixbox/mixbox-2.png
-    - /src/images/projects/mixbox/mixbox-2.png
-    - /src/images/projects/mixbox/mixbox-3.png
-    - /src/images/projects/mixbox/mixbox-4.png
-    - /src/images/projects/mixbox/mixbox-5.png
-    - /src/images/projects/mixbox/mixbox-6.png
-    - /src/images/projects/mixbox/mixbox-7.png
-    - /src/images/projects/mixbox/mixbox-8.png
-    - /src/images/projects/mixbox/mixbox-9.png
-    - /src/images/projects/mixbox/mixbox-10.png
-    - /src/images/projects/mixbox/mixbox-11.jpeg
-    - /src/images/projects/mixbox/mixbox-12.jpeg
-    - /src/images/projects/mixbox/mixbox-13.jpeg
-    - /src/images/projects/mixbox/mixbox-14.jpeg
-    - /src/images/projects/mixbox/mixbox-15.jpeg
-    - /src/images/projects/mixbox/mixbox-16.jpeg
-    - /src/images/projects/mixbox/mixbox-17.jpeg
-    - /src/images/projects/mixbox/mixbox-18.jpeg
-    - /src/images/projects/mixbox/mixbox-19.jpeg
-    - /src/images/projects/mixbox/mixbox-20.jpeg
-    - /src/images/projects/mixbox/mixbox-21.jpeg
-    - /src/images/projects/mixbox/mixbox-22.jpeg
-    - /src/images/projects/mixbox/mixbox-23.jpeg
-    - /src/images/projects/mixbox/mixbox-24.jpeg
-    - /src/images/projects/mixbox/mixbox-25.jpeg
-    - /src/images/projects/mixbox/mixbox-26.jpeg
-    - /src/images/projects/mixbox/mixbox-27.jpeg
-    - /src/images/projects/mixbox/mixbox-28.jpeg
-    - /src/images/projects/mixbox/mixbox-29.jpeg
-    - /src/images/projects/mixbox/mixbox-30.jpeg
-    - /src/images/projects/mixbox/mixbox-31.jpeg
-    - /src/images/projects/mixbox/mixbox-32.jpeg
-    - /src/images/projects/mixbox/mixbox-33.jpeg
-    - /src/images/projects/mixbox/mixbox-34.jpeg
+    - /public/images/projects/mixbox/mixbox-2.png
+    - /public/images/projects/mixbox/mixbox-2.png
+    - /public/images/projects/mixbox/mixbox-3.png
+    - /public/images/projects/mixbox/mixbox-4.png
+    - /public/images/projects/mixbox/mixbox-5.png
+    - /public/images/projects/mixbox/mixbox-6.png
+    - /public/images/projects/mixbox/mixbox-7.png
+    - /public/images/projects/mixbox/mixbox-8.png
+    - /public/images/projects/mixbox/mixbox-9.png
+    - /public/images/projects/mixbox/mixbox-10.png
+    - /public/images/projects/mixbox/mixbox-11.jpeg
+    - /public/images/projects/mixbox/mixbox-12.jpeg
+    - /public/images/projects/mixbox/mixbox-13.jpeg
+    - /public/images/projects/mixbox/mixbox-14.jpeg
+    - /public/images/projects/mixbox/mixbox-15.jpeg
+    - /public/images/projects/mixbox/mixbox-16.jpeg
+    - /public/images/projects/mixbox/mixbox-17.jpeg
+    - /public/images/projects/mixbox/mixbox-18.jpeg
+    - /public/images/projects/mixbox/mixbox-19.jpeg
+    - /public/images/projects/mixbox/mixbox-20.jpeg
+    - /public/images/projects/mixbox/mixbox-21.jpeg
+    - /public/images/projects/mixbox/mixbox-22.jpeg
+    - /public/images/projects/mixbox/mixbox-23.jpeg
+    - /public/images/projects/mixbox/mixbox-24.jpeg
+    - /public/images/projects/mixbox/mixbox-25.jpeg
+    - /public/images/projects/mixbox/mixbox-26.jpeg
+    - /public/images/projects/mixbox/mixbox-27.jpeg
+    - /public/images/projects/mixbox/mixbox-28.jpeg
+    - /public/images/projects/mixbox/mixbox-29.jpeg
+    - /public/images/projects/mixbox/mixbox-30.jpeg
+    - /public/images/projects/mixbox/mixbox-31.jpeg
+    - /public/images/projects/mixbox/mixbox-32.jpeg
+    - /public/images/projects/mixbox/mixbox-33.jpeg
+    - /public/images/projects/mixbox/mixbox-34.jpeg
 
 links:
     -   name: view project on Behance

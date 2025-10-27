@@ -1,10 +1,10 @@
 ---
 title: poem.txt
 description: This is tool lets you create playfull poems with your phone by using the computer as a canvas. The project is inspirated by the visual poetry Paul van Ostaijen.
-preview: /src/images/projects/poem-txt/poem-txt-1.png
+preview: /public/images/projects/poem-txt/poem-txt-1.png
 pics:
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-2.png
-    - /src/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-1.png
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-2.png
+    - /public/images/projects/la-cuisine-du-sang/la-cuisine-du-sang-1.png
 links:
     -   name: view project on GitHub
         link: https://github.com/Jana-Elst/poem.txt.git
