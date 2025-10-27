@@ -57,7 +57,7 @@ img {
   border: 0;
 }
 
-body {
+body, button {
   font-size: var(--fs-1);
   font-family: Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1, "cv11" on;

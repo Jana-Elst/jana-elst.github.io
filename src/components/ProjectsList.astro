@@ -1,11 +1,37 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
-const { projects } = Astro.props;
+const { projects, showYears } = Astro.props;
+const dates = projects.map((project) => project.data.year);
+const uniqueDates = [...new Set(dates)];
 ---
 
 <style>
     li + li {
         margin-top: 3rem;
+    }
+
+    .container-year {
+        display: flex;
+        gap: var(--space-2xs);
+        margin-bottom: var(--space-2xs);
+        align-items: center;
+    }
+
+    .divider {
+        border-radius: 100px;
+        margin: 3px 0px;
+        flex-grow: 2;
+        height: 1px;
+        background-color: transparent;
+    }
+
+    .year {
+        font-weight: 100;
+        font-size: var(--fs-3);
+    }
+
+    .container-year + ul {
+        margin-bottom: var(--space-xl);
     }
 
     @media screen and (min-width: 41rem) {
@@ -21,6 +47,24 @@ const { projects } = Astro.props;
         }
     }
 
+    .noResults {
+        display: flex;
+        text-align: center;
+        height: 50dvh;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .noResults .bold {
+        font-weight: bold;
+        font-size: var(--fs-3);
+        margin-bottom: var(--space-s);
+    }
+
+    .hidden {
+        display: none;
+    }
+
     @media screen and (min-width: 66rem) {
         ul {
             grid-template-columns: repeat(3, 1fr);
@@ -28,12 +72,39 @@ const { projects } = Astro.props;
     }
 </style>
 
-<ul>
-    {
-        projects.map((project) => (
-            <li>
-                <ProjectCard project={project} />
-            </li>
-        ))
-    }
+{
+    showYears ? uniqueDates.map((uniqueDate) => 
+    <div class="container-year show-dates">
+            <div class="divider"></div>
+            <h3 class="year">{uniqueDate}</h3>
+    </div>
+    <ul class="show-dates">
+        {
+            projects.map((project) => (project.data.year === uniqueDate ? (
+                <li
+                    data-category={project.data.tags.map(
+                        (tag) => `${tag.toLowerCase()}`,
+                    )}
+                >
+                    <ProjectCard project={project} />
+                </li>
+            ) : ''
+        ))}
+    </ul>
+) : ''}
+
+ <ul class=`dont-show-dates ${showYears ? 'hidden' : ''}`>
+        {
+            projects.map((project) => (
+                <li
+                    data-category={project.data.tags.map(
+                        (tag) => `${tag.toLowerCase()}`,
+                    )}
+                ><ProjectCard project={project} /></li>
+                ))}
 </ul>
+
+<div class="noResults hidden">
+    <p class="bold">Oooh no, you deselected all the categories.</p>
+    <p>Please, select a category to see some of my projects.</p>
+</div>

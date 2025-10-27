@@ -1,16 +1,132 @@
 ---
+const currentPath = Astro.url.pathname;
+console.log(currentPath);
 
+const filters = ["all", "design", "development", "user research"];
 ---
 
+<script>
+  // The key is the filter's 'value' from the checkbox.
+  // The value is an array of all the data-category tags it should match.
+  const filterAliases = {
+    "user research": ["user research", "ux"],
+    development: ["development", "web development", "dev", "coding"],
+    design: ["design", "web design", "UI", "app design", "branding"],
+  };
+
+  const handleOptionChange = (event) => {
+    // --- 1. MANAGE CHECKBOX STATES ---
+    const allInput = document.querySelector('.filteroption[value="all"]');
+    const otherInputs = [
+      ...document.querySelectorAll('.filteroption:not([value="all"])'),
+    ];
+    const clickedInput = event.target;
+
+    // If 'All' was clicked and is now checked, uncheck all other options.
+    if (clickedInput.value === "all" && clickedInput.checked) {
+      otherInputs.forEach((input) => (input.checked = false));
+    }
+    // If another option was clicked and is now checked, uncheck 'All'.
+    else if (clickedInput.value !== "all" && clickedInput.checked) {
+      allInput.checked = false;
+    }
+
+    // If no specific filters are checked (e.g., the user unselected the last one),
+    // default back to selecting 'All'.
+    const anyOtherChecked = otherInputs.some((input) => input.checked);
+    if (!anyOtherChecked) {
+      allInput.checked = true;
+    }
+
+    // --- 2. APPLY THE FILTER LOGIC ---
+    // Get the final selection of checked boxes AFTER managing the states above.
+    const selection = [
+      ...document.querySelectorAll(".filteroption:checked"),
+    ].map(($input) => $input.value);
+
+    const allProjects = document.querySelectorAll("[data-category]");
+    const noResultsMessage = document.querySelector(".noResults");
+    const yearHeadings = document.querySelectorAll(".show-dates");
+    const noYearHeadings = document.querySelectorAll(".dont-show-dates");
+
+    // If 'All' is selected, simply show everything and finish.
+    if (selection.includes("all")) {
+      allProjects.forEach(($li) => $li.classList.remove("hidden"));
+      noResultsMessage.classList.add("hidden");
+      yearHeadings.forEach(($h) => $h.classList.remove("hidden"));
+      noYearHeadings.forEach(($h) => $h.classList.add("hidden"));
+      return; // Exit the function early
+    }
+
+    // Otherwise, proceed with applying the specific filters.
+    yearHeadings.forEach(($h) => $h.classList.add("hidden"));
+    noYearHeadings.forEach(($h) => $h.classList.remove("hidden"));
+    const expandedSelection = selection.flatMap(
+      (filter) => filterAliases[filter] || filter,
+    );
+
+    let hasVisibleProjects = false;
+    allProjects.forEach(($li) => {
+      // Get project categories, and trim whitespace from each just in case.
+      const projectCategories = $li.dataset.category
+        .split(",")
+        .map((cat) => cat.trim());
+
+      // Check if any of the project's categories are in the selected list.
+      const shouldBeVisible = projectCategories.some((category) =>
+        expandedSelection.includes(category),
+      );
+
+      if (shouldBeVisible) {
+        $li.classList.remove("hidden");
+        hasVisibleProjects = true;
+      } else {
+        $li.classList.add("hidden");
+      }
+    });
+
+    // --- 3. SHOW 'NO RESULTS' MESSAGE IF NEEDED ---
+    if (hasVisibleProjects) {
+      noResultsMessage.classList.add("hidden");
+    } else {
+      noResultsMessage.classList.remove("hidden");
+    }
+  };
+
+  // --- 4. INITIAL SETUP ---
+  // Wait for the page to load to ensure elements are available.
+  document.addEventListener("DOMContentLoaded", () => {
+    const allInput = document.querySelector('.filteroption[value="all"]');
+    // Set the "All" button to be checked by default on page load.
+    if (allInput) {
+      allInput.checked = true;
+    }
+  });
+
+  // Add the event listener to all checkboxes.
+  const options = document.querySelectorAll(".filteroption");
+  options.forEach((option) =>
+    option.addEventListener("click", handleOptionChange),
+  );
+</script>
+
 <style>
+  header {
+    position: sticky;
+  }
+
   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content;
+
     margin: 1rem;
   }
 
   .nav__title {
+    grid-column: 1;
+    grid-row: 1;
+
     font-size: var(--fs-3);
     font-style: normal;
     font-weight: 600;
@@ -23,8 +139,13 @@
   }
 
   .nav__list {
+    grid-column: 2;
+    grid-row: 1;
+
     display: flex;
     font-weight: 300;
+
+    justify-self: end;
   }
 
   .nav__item a {
@@ -70,6 +191,75 @@
     width: 100%;
   }
 
+  .filters {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-top: 1rem;
+  }
+
+  .modus__list,
+  .filter__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(var(--space-xs));
+    font-weight: 300;
+  }
+
+  .modus__item,
+  .filter__item {
+    border: 0.75px solid black;
+    border-radius: 100px;
+
+    text-transform: lowercase;
+    text-align: center;
+    min-width: 6rem;
+
+    transition:
+      background-color 0.5s,
+      color 0.25s;
+  }
+
+  .filter__item > label,
+  .modus__item > a {
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4xs) var(--space-xs);
+  }
+
+  .modus__item a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .modus__item--active {
+    background-color: black;
+  }
+
+  .modus__item--active a,
+  .filter__item:has(input:checked) {
+    background-color: black;
+    color: var(--bg-color);
+    font-weight: 400;
+  }
+
+  .modus__item:hover a,
+  .filter__item:hover label {
+    color: var(--bg-color);
+  }
+
+  .modus__item:hover,
+  .filter__item:hover {
+    background-color: black;
+  }
+
+  .filter__item input {
+    display: none;
+  }
+
   @keyframes wiggle {
     0% {
       transform: rotate(0deg); /* Start at the original position */
@@ -90,8 +280,59 @@
 
   @media screen and (min-width: 48rem) {
     .nav {
-      margin: var(--space-m);
       margin-bottom: var(--space-2xs);
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    .filters {
+      display: flex;
+      margin-top: 0;
+    }
+
+    .modus__list,
+    .filter__list {
+      gap: calc(var(--space-2xs) / 2);
+    }
+
+    .modus__item,
+    .filter__item {
+      min-width: 0rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__title {
+      grid-column: 1;
+      grid-row: 1;
+
+      font-size: var(--fs-3);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      align-self: center;
+    }
+
+    .nav__list {
+      align-self: center;
+    }
+
+    header {
+      top: 0;
+      padding: 1rem;
+      margin: calc(var(--space-m) - 1rem);
+      background-color: (var(--bg-color) / 100%);
+      backdrop-filter: blur(20px);
+      z-index: 100;
+
+      mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 75%,
+        transparent 100%
+      );
     }
   }
 </style>
@@ -99,6 +340,44 @@
 <header class="container">
   <nav class="nav">
     <h1 class="nav__title"><a href="/">Jana</a></h1>
+
+    <div class="filters">
+      {
+        currentPath === "/projects" ? (
+          <ul class="filter__list">
+            {filters.map((filter) => (
+              <li class="filter__item">
+                <label>
+                  {filter}
+                  <input
+                    class="filteroption"
+                    type="radio"
+                    value={filter}
+                    name="filter"
+                  />
+                </label>
+              </li>
+            ))}
+          </ul>
+        ) : currentPath === "/" || currentPath === "/discover" ? (
+          <ul class="modus__list">
+            <li
+              class={`modus__item ${currentPath.replace(/\/$/, "") === "" ? "modus__item--active" : ""}`}
+            >
+              <a href="/">normal</a>
+            </li>
+            <li
+              class={`modus__item ${currentPath.replace(/\/$/, "") === "/discover" ? "modus__item--active" : ""}`}
+            >
+              <a href="/discover">discover</a>
+            </li>
+          </ul>
+        ) : (
+          ""
+        )
+      }
+    </div>
+
     <ul class="nav__list" id="nav__list">
       <li class="nav__item"><a href="/projects">projects</a></li>
       <li class="nav__item"><a href="/about">about</a></li>

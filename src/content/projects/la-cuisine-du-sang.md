@@ -17,9 +17,9 @@ pics:
 
 links:
     -   name: view the final result
-        link: https://janaelst.be/cuisinedesang/
+        link: https://projects.janaelst.be/cuisinedesang/
         
-year: 2023
+year: 2024
 partners:
     - Devine I integration 2
 services:
@@ -37,9 +37,10 @@ device:
     - desktop
 role: individual student work
 tags:
-    - Web Development
-    - UX, UI & Web Design
-draft: true
+    - Web Design
+    - UX
+featured: true
+draft: false
 permalink: projects/la-cuisine-du-sang/
 ---
 ## Concept

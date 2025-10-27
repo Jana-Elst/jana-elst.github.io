@@ -29,6 +29,12 @@ const projects = defineCollection({
                     link: z.string()
                 })
             ),
+            figma: z.object({
+                src: z.string(),
+                width: z.number(),
+                height: z.number(),
+                border: z.string().optional()
+            }).optional(),
             year: z.number(),
             partners: z.array(z.string()),
             services: z.array(z.string()),
@@ -36,6 +42,7 @@ const projects = defineCollection({
             device: z.array(z.string()).optional(),
             role: z.string(),
             tags: z.array(z.string()),
+            featured: z.boolean(),
             draft: z.boolean(),
             permalink: z.string()
         })

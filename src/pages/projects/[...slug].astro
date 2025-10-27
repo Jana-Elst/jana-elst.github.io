@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Markdown from "../../layouts/Markdown.astro";
 import Button from "../../components/Button.astro";
+import Gallery from "../../components/Gallery.astro";
 import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
@@ -14,6 +15,12 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+console.log("Full entry data:", entry.data);
+console.log("Figma data:", entry.data.figma);
+console.log("Figma src:", entry.data.figma?.src);
+
+const hasContent = entry.rendered.html !== "";
 ---
 
 <style>
@@ -62,7 +69,8 @@ const { Content } = await entry.render();
     grid-area: img;
   }
 
-  .image--content {
+  .image--content,
+  .frame {
     width: 70%;
     margin: 6rem auto;
     margin-bottom: 4rem;
@@ -163,6 +171,17 @@ const { Content } = await entry.render();
     margin: 4rem 0;
   }
 
+  :global(p + p) {
+    padding-top: var(--space-2xs);
+  }
+
+  :global(em) {
+    font-style: italic;
+  }
+
+  .frame {
+  }
+
   @media screen and (min-width: 48rem) {
     .button--top {
       grid-area: button;
@@ -225,7 +244,8 @@ const { Content } = await entry.render();
       padding: 0;
     }
 
-    .image--content {
+    .image--content,
+    .frame {
       justify-self: center;
       margin-top: var(--space-s);
     }
@@ -304,21 +324,40 @@ const { Content } = await entry.render();
       }
     </ul>
 
-    <Image src={entry.data.pics[0]} alt="" class="image image--content" />
+    {
+      entry.data.figma ? (
+        <iframe
+          class="frame"
+          src={entry.data.figma.src}
+          width={entry.data.figma.width}
+          height={entry.data.figma.height}
+          style={`border: ${entry.data.figma.border}`}
+          allowfullscreen
+        />
+      ) : (
+        <Image
+          src={entry.data.pics[0]}
+          alt={entry.data.title}
+          class="image image--content"
+        />
+      )
+    }
   </div>
 
   <Content />
 
   <div slot="gallery">
-    <ul class="links links--content">
-      {
-        entry.data.links.map((l) => (
-          <li class="link">
-            <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
-          </li>
-        ))
-      }
-    </ul>
+    {
+      hasContent && (
+        <ul class="links links--content">
+          {entry.data.links.map((l) => (
+            <li class="link">
+              <Button btnText={l.name} btnURL={l.link} btnFunction="link" />
+            </li>
+          ))}
+        </ul>
+      )
+    }
 
     <ul class="gallery">
       {
@@ -333,5 +372,7 @@ const { Content } = await entry.render();
     <div class="btn-back">
       <Button btnText="back to top" btnURL="" btnFunction="top" />
     </div>
+
+    <!-- <Gallery images={entry.data.pics.slice(1)} /> -->
   </div>
 </Markdown>
