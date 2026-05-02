@@ -39,7 +39,7 @@ role: individual student work
 tags:
     - Web Design
     - UX
-featured: true
+featured: false
 draft: false
 permalink: /la-cuisine-du-sang/
 ---

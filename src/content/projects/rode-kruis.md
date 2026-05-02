@@ -46,7 +46,7 @@ tags:
     - Digital Design
     - Branding
     - Marketing
-featured: true
+featured: false
 draft: false
 permalink: /rode-kruis/
 ---

@@ -65,7 +65,7 @@ tags:
     - Digital Design
     - App Design
     - Branding
-featured: true
+featured: false
 draft: false
 permalink: /mixbox/
 ---
