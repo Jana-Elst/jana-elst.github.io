@@ -35,7 +35,13 @@ const projects = defineCollection({
                 height: z.number(),
                 border: z.string().optional()
             }).optional(),
+            video: z.object({
+                src: z.string(),
+                width: z.number().optional(),
+                height: z.number().optional()
+            }).optional(),
             year: z.number(),
+            month: z.number().optional(),
             partners: z.array(z.string()),
             services: z.array(z.string()),
             tools: z.array(z.string()),

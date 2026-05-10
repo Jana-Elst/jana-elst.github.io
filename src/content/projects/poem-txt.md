@@ -1,6 +1,6 @@
 ---
 title: poem.txt
-description: An interactive installation where visitors shoot words from their smartphone onto a large screen to create visual poems. Words can be styled with different typefaces, boldness, italics, and rotation—but no color, honoring Paul van Ostaijen's approach to visual poetry.
+description: An interactive installation where visitors shoot words from their smartphone onto a large screen to create visual poems. Words can be styled with different typefaces, boldness, italics, and rotation, honoring Paul van Ostaijen's approach to visual poetry.
 preview: /public/images/projects/poem-txt/poem-txt-1.png
 pics:
     - /public/images/projects/poem-txt/poem-txt-1.png
@@ -9,6 +9,7 @@ links:
         link: https://github.com/Jana-Elst/poem.txt.git
         
 year: 2025
+month: 6
 partners:
     - Devine I Creative Code 4
 services:
@@ -45,15 +46,9 @@ Visitors type a word on their smartphone and style it—choosing typeface, weigh
 
 Currently, visitors can save their creation as an image. I'm working on a new version that will allow them to plot their poem directly onto a postcard—bringing the digital creation back into the physical world.
 
-## Design Philosophy
-
-Notably, there's **no color**. This constraint is intentional, honoring Paul van Ostaijen's approach to visual poetry, where meaning comes from placement, scale, and typography—not color. There's also no animation on individual words. The movement comes from the gesture of shooting, not from the words themselves moving after they land.
-
-This restraint forces visitors to think more carefully about composition, spacing, and how words interact spatially.
-
 ## Inspiration: Paul van Ostaijen
 
-The project is rooted in **Paul van Ostaijen's visual poetry**, where the placement and typography of words on the page become integral to the meaning. Rather than just reading the words, you *see* the poem. By translating this into an interactive, three-dimensional space, the installation invites visitors to become poets themselves—exploring how language, movement, and space create meaning together.
+The project is rooted in **Paul van Ostaijen's visual poetry**, where the placement and typography of words on the page become integral to the meaning. Rather than just reading the words, you *see* the poem. By translating this into an interactive, three-dimensional space, the installation invites visitors to become poets themselves. So they can start exploring how language, movement, and space create meaning together.
 
 ## Technical Implementation
 

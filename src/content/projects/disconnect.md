@@ -4,11 +4,18 @@ description: A spatial installation dispersed across two rooms that creates sere
 preview: /public/images/projects/dis-connect/dis-connect-1.png
 pics:
     - /public/images/projects/dis-connect/dis-connect-1.png
+video:
+    src: https://player.vimeo.com/video/1163033255?loop=1&autopause=0
 links:
     -   name: Read my full process & research
         link: https://www.janaelst.be/passionProject/
+    -   name: Watch the video
+        link: https://vimeo.com/1163033255?share=copy&fl=sv&fe=ci
+    -   name: Final presentation 
+        link: https://www.figma.com/deck/XeDYmtkyNNSEPznhQHZP54
         
 year: 2026
+month: 1
 partners:
     - Devine I Passion Project
 services:
@@ -27,8 +34,6 @@ role: Creative coder & Designer
 tags:
     - Creative Coding
     - Concept Development
-    - Installation Art
-    - Physical Computing
 featured: true
 draft: false
 permalink: /disconnect/

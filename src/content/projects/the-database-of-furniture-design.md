@@ -14,6 +14,7 @@ links:
         link: https://www.janaelst.be/atlas/
 
 year: 2024
+month: 11
 partners:
     - Devine I web 3
 services:

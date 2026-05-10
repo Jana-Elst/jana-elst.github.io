@@ -15,6 +15,7 @@ links:
     -   name: This project will be on Github soon
         link: ''
 year: 2025
+month: 8
 partners:
     - Personal project
 services:

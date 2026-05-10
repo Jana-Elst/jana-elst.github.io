@@ -23,6 +23,7 @@ links:
     -   name: read the extended abstract (NE)
         link: /master-thesis/Extended_Abstract_NE.pdf
 year: 2023
+month: 8
 partners:
     - Ghent University I master's thesis
     - Royal Museum of Fine Arts Belgium (KMSKB)

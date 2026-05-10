@@ -49,6 +49,7 @@ figma:
     height: 450
     border: "1px solid rgba(0, 0, 0, 0.1)"
 year: 2025
+month: 5
 partners:
     - Devine I Visual Design 4
 services:

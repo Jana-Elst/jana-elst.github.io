@@ -5,7 +5,12 @@ import { getCollection } from "astro:content";
 
 const allProjects = await getCollection("projects");
 const projects = allProjects.filter((project) => !project.data.draft);
-projects.sort((a, b) => +b.data.year - +a.data.year);
+projects.sort((a, b) => {
+    if (b.data.year !== a.data.year) {
+        return +b.data.year - +a.data.year;
+    }
+    return (b.data.month || 0) - (a.data.month || 0);
+});
 ---
 
 <style>
@@ -31,6 +36,6 @@ projects.sort((a, b) => +b.data.year - +a.data.year);
 <Base title="Projects">
     <h2 class="visually-hidden">projects</h2>
     <div class="projects">
-        <ProjectsList projects={projects} showYears={true} />
+        <ProjectsList projects={projects} showYears={false} />
     </div>
 </Base>

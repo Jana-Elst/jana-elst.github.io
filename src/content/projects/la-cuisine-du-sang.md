@@ -20,6 +20,7 @@ links:
         link: https://projects.janaelst.be/cuisinedesang/
         
 year: 2024
+month: 6
 partners:
     - Devine I integration 2
 services:
