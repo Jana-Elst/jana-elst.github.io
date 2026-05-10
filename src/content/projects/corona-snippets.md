@@ -16,6 +16,7 @@ links:
     -   name: view on GitHub
         link: https://github.com/Jana-Elst/scrollytelling.git
 year: 2024
+month: 11
 partners:
     - Devine I Creative Code 3
 services:

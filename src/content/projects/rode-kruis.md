@@ -31,6 +31,7 @@ figma:
     height: 450
     border: "1px solid rgba(0, 0, 0, 0.1)"
 year: 2024
+month: 10
 partners:
     - Devine I Visual Design 3
 services:
@@ -46,7 +47,7 @@ tags:
     - Digital Design
     - Branding
     - Marketing
-featured: true
+featured: false
 draft: false
 permalink: /rode-kruis/
 ---

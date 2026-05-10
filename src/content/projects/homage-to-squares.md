@@ -16,6 +16,7 @@ pics:
     - /public/images/projects/homage-to-squares/homage-to-squares-11.png
         
 year: 2024
+month: 10
 partners:
     - Devine I creative code 3
 services:

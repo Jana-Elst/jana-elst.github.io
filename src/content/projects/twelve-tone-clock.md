@@ -10,7 +10,8 @@ pics:
 links:
     -   name: view the final result
         link: https://janaelst.be/clock/
-year: 2023
+year: 2024
+month: 4
 partners:
     - Devine I creative code 2
 services:

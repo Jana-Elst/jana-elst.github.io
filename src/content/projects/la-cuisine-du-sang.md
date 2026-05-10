@@ -20,6 +20,7 @@ links:
         link: https://projects.janaelst.be/cuisinedesang/
         
 year: 2024
+month: 6
 partners:
     - Devine I integration 2
 services:
@@ -39,7 +40,7 @@ role: individual student work
 tags:
     - Web Design
     - UX
-featured: true
+featured: false
 draft: false
 permalink: /la-cuisine-du-sang/
 ---
