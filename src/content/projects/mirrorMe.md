@@ -26,7 +26,6 @@ role: individual student work
 tags:
     - App Development
     - Concept Development
-    - Machine Learning
 featured: true
 draft: false
 permalink: /mirrorme/
