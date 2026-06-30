@@ -1,6 +1,6 @@
 ---
 title: Abby moments
-description: An interactive museum campaign for Abby Kortrijk that encourages visitors to slow down and participate in bog or small activities. The Abbymomenten website lets visitors organize events, participate in museum activities, and share their moments on the momentenmuur wall.
+description: An interactive museum campaign for Abby Kortrijk that encourages visitors to slow down and participate in big or small activities. The Abbymomenten website lets visitors organize events, participate in museum activities, and share their moments on the momentenmuur wall.
 preview: /public/images/projects/abby/abby-1.png
 pics:
     - /public/images/projects/abby/abby-1.png
@@ -37,6 +37,7 @@ draft: false
 permalink: /abby-moments/
 ---
 
+<!--
 ## The Brief
 
 Abby is a museum in Kortrijk that had recently reopened after renovations. They wanted to attract new visitors, but more importantly, they wanted to boost participation in activities. The challenge: how do you encourage people to participate in events when there's a barrier to entry, especially for smaller activities?
@@ -74,3 +75,4 @@ The ideation phase was collaborative with lots of debating, sketching, and refin
 - [-] Everyone supported each other as needed
 
 This structure allowed us to move fast while staying aligned on the vision.
+-->

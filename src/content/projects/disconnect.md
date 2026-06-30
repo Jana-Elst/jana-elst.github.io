@@ -1,6 +1,8 @@
 ---
 title: "[dis]connect"
-description: A spatial installation dispersed across two rooms that creates serendipitous conversations between strangers using vintage rotary phones. The project explores how obsolete technologies can break the "smartphone bubble" and facilitate meaningful micro-interactions.
+description: |
+  When was the last time you actually had a proper conversation with someone you'd never met before?
+
 preview: /public/images/projects/dis-connect/dis-connect-1.png
 pics:
     - /public/images/projects/dis-connect/dis-connect-1.png
@@ -38,7 +40,12 @@ featured: true
 draft: false
 permalink: /disconnect/
 ---
+  We are more connected than ever, yet also lonelier than ever. The smartphone has replaced spontaneous interactions with endless scrolling. Social media promised us connection, but brought more isolation instead. [Dis]connect is a small invitation to be truly present for a moment.
 
+  [Dis]connect connects two visitors via a vintage rotary telephone. If someone picks up, you'll hear the voice of someone you've never met. Nothing is recorded, nothing is saved. Two people, one conversation, that's all you need. Connection can be that simple.
+
+  Will you be the next one to pick up?
+<!--
 ## The Research Question
 
 **How might we use obsolete technologies to break the smartphone bubble and facilitate meaningful micro-interactions between strangers?**
@@ -86,4 +93,4 @@ The focus is on keeping the technical setup invisible—visitors experience vint
 
 I don't want to fix the whole world, but I'd love to make a small difference in someone's day. This installation is my attempt to create a moment where strangers become briefly connected—not through screens, but through voice, vulnerability, and chance.
 
-The project was selected for **div.fuse**, an exhibition celebrating this kind of experimental, conceptually-driven work.
+The project was selected for **div.fuse**, an exhibition celebrating this kind of experimental, conceptually-driven work. -->
