@@ -310,9 +310,17 @@ const hasContent = entry.rendered.html !== "";
       </dd>
     </dl>
 
-    <p class="intro">
+    <!-- <p class="intro">
       {entry.data.description}
-    </p>
+    </p> -->
+
+    <div class="intro">
+      {
+        entry.data.description
+          .split("\n\n")
+          .map((paragraph) => <p class="intro">{paragraph}</p>)
+      }
+    </div>
 
     <ul class="links links--content">
       {
@@ -337,14 +345,31 @@ const hasContent = entry.rendered.html !== "";
           allowfullscreen
         />
       ) : entry.data.video ? (
-        <div class="frame image--content" style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "100%", margin: "6rem auto 4rem", width: "70%" }}>
-          <iframe 
-            src={entry.data.video.src} 
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
-            frameborder="0" 
-            allow="fullscreen; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+        <div
+          class="frame image--content"
+          style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+            maxWidth: "100%",
+            margin: "6rem auto 4rem",
+            width: "70%",
+          }}
+        >
+          <iframe
+            src={entry.data.video.src}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            frameborder="0"
+            allow="fullscreen; picture-in-picture"
+            allowfullscreen
+          />
         </div>
       ) : (
         <Image

@@ -1,6 +1,11 @@
 ---
 title: mirrorMe
-description: A fully functional React Native app that transforms digital communication into a physical, embodied experience. When you unlock a message, you're not just reading text, you're replicating the sender's movement, stepping into their gesture, and understanding how they sent it.
+description: |
+    Do you ever think about the position you’re in when you send a message? Slumped on the sofa, walking to class, lying in bed...
+
+    The way we sit, stand or walk says a lot about how we feel. But none of that context carries over into a message.
+    MirrorMe adds an extra layer to your message. You write in whatever position you like. The recipient can only open your message by holding their phone exactly the way you did. That way, every message carries just a little more of the moment it was written in.
+
 preview: /public/images/projects/mirrorMe/mirrorMe-1.png
 pics:
     - /public/images/projects/mirrorMe/mirrorMe-2.png
@@ -30,7 +35,7 @@ featured: true
 draft: false
 permalink: /mirrorme/
 ---
-
+<!--
 ## The Assignment
 
 The challenge was to learn React Native by building a fully functional application. Rather than create a standard UI exercise, I wanted to explore something conceptually interesting: how technology could facilitate more meaningful human connection.
@@ -52,3 +57,4 @@ When you send a message, mirrorMe captures real-time sensor data from your phone
 When the receiver gets it, their device reads sensor data as they move their phone. The app compares their live sensor readings to the sender's captured movement. When the patterns match—when they've tilted, rotated, and positioned their phone the same way, the message unlocks.
 
 **Supabase** stores the messages and movement data securely, creating a persistent link between sender and receiver through their shared gesture.
+-->

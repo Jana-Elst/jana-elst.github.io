@@ -1,6 +1,13 @@
 ---
 title: poem.txt
-description: An interactive installation where visitors shoot words from their smartphone onto a large screen to create visual poems. Words can be styled with different typefaces, boldness, italics, and rotation, honoring Paul van Ostaijen's approach to visual poetry.
+description: |
+    Poem.txt is an interactive installation inspired by the shape poems of Paul van Ostaijen. In a shape poem, the placement and typography of words matter just as much as their meaning."
+
+    Type a word, choose a font, make it bold, italic, or rotate it. Pull the word down, let go and shoot it onto the big screen.
+    The harder you shoot, the bigger the word. Word by word, you build your own shape poem.
+    
+    Will you grab your phone and join in?
+
 preview: /public/images/projects/poem-txt/poem-txt-1.png
 pics:
     - /public/images/projects/poem-txt/poem-txt-1.png
@@ -34,6 +41,7 @@ draft: false
 permalink: /poem-txt/
 ---
 
+<!--
 ## The Assignment
 
 For Creative Code 4, I had to build a mobile + screen interaction. Rather than create something purely functional, I wanted to layer in something meaningful—connecting playfulness with art and exploring how digital tools can become creative instruments.
@@ -53,3 +61,4 @@ The project is rooted in **Paul van Ostaijen's visual poetry**, where the placem
 ## Technical Implementation
 
 The core challenge was enabling real-time communication between mobile devices and the installation screen with minimal latency. I used **WebRTC** for direct peer-to-peer communication between browsers, creating an immediate, responsive experience where every gesture feels connected.
+-->
